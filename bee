@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        htmle,body{
+            height:100%;
+            margin:0;
+            padding:0px;
+        }
+        #ex_contain{
+            position:absolute;
+            width:500px;
+            height:400px;
+            left:50%;
+            top:50%;
+            margin-left:-250px;
+            margin-top:-250px;
+
+        }
+        #bee{
+            position:relative;
+            animation:move 1s infinite;
+        }
+        @keyframes move{
+            0%{
+                left:0px;
+                top:0px;
+            }
+            25%{
+                left:-125px;
+                top:-125px;
+            }
+            50%{
+                left:-125px;
+                top:125px;
+            }
+            100%{
+                left:0px;
+                top:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="ex_contain">
+        <img id="bee" src="bee.gif" alt="bee">
+    </div>
+   <script>
+    var BEE=document.querySelector('#ex_contain');
+    var random1=math.random()*(document.body.clientWidth-500);
+    var random2=math.random()*(document.body.clientHeight-400);
+    BEE.style.left=random1+"px";
+    BEE.style.top=random2+"px";
+   </script>
+    </script>
+</body>
+</html>
